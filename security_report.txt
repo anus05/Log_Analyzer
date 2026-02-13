@@ -1,0 +1,28 @@
+=========== SECURITY LOG REPORT ===========
+
+Total Requests: 32
+
+------ STATUS CODE SUMMARY ------
+200 -> 12
+403 -> 11
+404 -> 6
+500 -> 3
+
+------ TOP 5 IP ADDRESSES ------
+1. 45.33.12.90 -> 9 requests
+2. 198.51.100.22 -> 7 requests
+3. 103.25.11.7 -> 6 requests
+4. 203.0.113.55 -> 4 requests
+5. 192.168.1.10 -> 3 requests
+
+------ TOP 5 ATTACKED / VISITED URLS ------
+1. /login -> 9 hits
+2. /admin -> 5 hits
+3. /contact -> 4 hits
+4. /home -> 3 hits
+5. /dashboard -> 3 hits
+
+------ SUSPICIOUS ACTIVITY DETECTED ------
+[SCANNING] 45.33.12.90 -> 6 not found requests (404)
+
+=========== END OF REPORT ===========
