@@ -23,8 +23,13 @@ for line in f:
         ip = parts[0]
         date_time = parts[3].replace("[", "")
         method = parts[4].replace('"', "")
-        url = parts[5]
-        status = parts[-1]
+        #Find URL Index
+        url_index=(lambda method:parts.index("\"POST")+1 if method.find("\"POST")!=-1 else parts.index("\"GET")+1 if method.find("\"GET")!=-1 else None)(line)
+       
+        url = parts[url_index]
+       
+        #Status code
+        status = parts[url_index+2]
 
         # Count IP requests
         ip_count[ip] = ip_count.get(ip, 0) + 1
@@ -111,3 +116,4 @@ report.close()
 
 print("✅ Log Analysis Completed Successfully!")
 print("📄 Report Generated:", report_path)
+
